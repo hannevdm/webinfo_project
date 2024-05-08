@@ -5,23 +5,32 @@ Search by location
 {% endblock %}
 
 {% block specific_css %}
-
 <link rel="stylesheet" href="../static/mapstyle.css">
-
 {% endblock %}
 
 {% block content %}
-
+<!-- Title above the map -->
 <h1>Agatha around the world</h1>
-<body>
-    <div id="image-container">
-        <img src="../static/images/worldmap.png" alt="World Map">
-        <!-- Define clickable points -->
-        <div class="point" data-location="location1" style="top: 10%; left: 50%;"></div>
-        <div class="point" data-location="location2" style="top: 20%; left: 55%;"></div>
-        <div class="point" data-location="location3" style="top: 30%; left: 60%;"></div>
-        <div class="point" data-location="location4" style="top: 40%; left: 65%;"></div>
-        <!-- Add more points as needed -->
-    </div>
-</body>
+
+<!-- Navbar below the map -->
+<nav class="navbar navbar-custom">
+    <!-- Navbar content -->
+</nav>
+
+<!-- Wrap the map with a container -->
+<div id="map-container">
+    <!-- Wrap the image with a map -->
+    <map name="mymap">
+        <!-- Define clickable areas -->
+        <area id="circle-area" shape="circle" coords="200,200,50" href="page1.html" alt="Circle">
+        <area id="rectangle-area" shape="rect" coords="300,300,400,400" href="page2.html" alt="Rectangle">
+    </map>
+
+    <!-- Associate the image with the map -->
+    <img src="../static/images/worldmap.png" alt="World Map" usemap="#mymap" width="80%">
+
+    <!-- Overlay for clickable areas -->
+    <div class="overlay" id="circle-overlay"></div>
+    <div class="overlay" id="rectangle-overlay"></div>
+</div>
 {% endblock %}

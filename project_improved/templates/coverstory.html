@@ -1,0 +1,49 @@
+{% extends 'base_layout.html' %}
+
+{% block title %}
+Christie's Works
+{% endblock %}
+
+{% block specific_css %}
+
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/coverstory.css">
+
+    {% endblock %}
+
+    {% block content %}
+
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <img src="https://openclipart.org/image/800px/173860" alt="Logo">
+        </div>
+        <h1 class="content-container">Christie's Works</h1>
+    </div>
+</header>
+<div class="container content">
+
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" id="carouselItems">
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block specific_js %}
+<script src="../static/coverstory.js"></script>
+
+{% endblock %}

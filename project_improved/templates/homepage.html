@@ -6,19 +6,45 @@ Homepage
 
 {% block specific_css %}
 
-<!-- Link here your specific css -->
+<link rel="stylesheet" href="../static/homepage.css">
 
+{% endblock %}
+
+{% block header %} 
 {% endblock %}
 
 {% block content %}
+<body>
 
-<!-- your html content -->
-homepage
+
+<main>
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="display-4">Welcome to Plotting with Agatha</h1>
+            <p class="lead">Explore the world of the Queen of Mystery</p>
+            <a href="#" class="btn btn-primary">Learn More</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Biography</h2>
+                <p>Learn about Agatha Christie's life and legacy</p>
+            </div>
+            <div class="col-md-4">
+                <h2>Books</h2>
+                <p>Discover Agatha Christie's famous novels and stories</p>
+            </div>
+            <div class="col-md-4">
+                <h2>History</h2>
+                <p>Looking back at the world during Agatha's time</p>
+            </div>
+        </div>
+    </section>
+</main>
+
 
 {% endblock %}
 
-{% block specific_js %}
 
-<!-- Link here your specific js -->
-
-{% endblock %}

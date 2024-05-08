@@ -10,6 +10,7 @@
     {% block specific_css %}{% endblock %}
 </head>
 <body>
+{% block header %}
 <header>
     <div class="container-fluid">
         <div class="row justify-content-between">
@@ -21,14 +22,20 @@
             </div>
         </div>
     </div>
-
 </header>
+{% endblock %}
+
 <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class = img-container>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Agatha_Christie%27s_signature.svg/320px-Agatha_Christie%27s_signature.svg.png" alt="Agatha Christie's Signature" width="200" height="50">
+    </div>
     <a class="navbar-brand" href="/">Home</a>
+    <!-- Add the button for toggling the collapse behavior -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Add the collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
@@ -60,6 +67,7 @@
         </a>
     </div>
 </nav>
+
 <main>
     {% block content %}{% endblock %}
 </main>
