@@ -1,0 +1,47 @@
+/* CSS styles go here */
+body {
+    font-family: "American Typewriter";
+    margin:100px;
+    padding: 0;
+    background-blend-mode: overlay;
+}
+
+header {
+    background-color: darkred;
+    color:black;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+
+
+.jumbotron {
+    background-color: white;
+}
+
+.container {
+    border: black;
+}

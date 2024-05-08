@@ -16,15 +16,17 @@ body {
 
 header {
   margin-top: 60px;
-  background-color: #b97070;
-  padding-top: 0px;
-  padding-bottom: 20px;
+  background-color: white !important;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 10px solid darkred; 
+  border-bottom: 4px solid darkred; 
 }
 
 .navbar.navbar-custom {
   margin-bottom: 0px;
   height: 60px;
-  background-color: #b97070 !important;
+  background-color: darkred;
   color: #f4f0f0 !important; 
   font-size: 20px;
   font-family: "American Typewriter", serif; 
@@ -38,19 +40,28 @@ header {
   z-index: 1000; 
 }
 
+.navbar-custom .img-container img {
+  padding-right: 40px;
+  padding-top: 13px;
+  padding-bottom: 10px;
+}
+
+
+
+
+
 .navbar-custom .navbar-nav .nav-link {
   color: #ffffff; 
   font-size: 16px; 
 }
 
 .navbar-title {
-  font-size: 24px; 
   font-weight: bold;
-  color: #eee7e7; 
+  color: #dfdada; 
   align-content: center;
   text-align: center;
   font-family: "American Typewriter", serif;
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .navbar-header {
@@ -73,11 +84,10 @@ header {
 }
 
 .navbar-subtitle {
-  font-size: 16px;
-  color: #3e210c; 
+  color: #959291; 
   text-align:center;
   font-family: "American Typewriter", serif;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 
@@ -96,7 +106,8 @@ header {
 
 
 footer {
-  background-color: #f2e3cf;
+  background-color: #333;
+  color: white;
   padding-top: 100px;
   margin-top: 100px;
   width: 100%;
@@ -109,9 +120,7 @@ footer {
   position: bottom;
 }
 
-.footer span {
-  font-weight: bold;
-}
+
 
  /* Style all font awesome icons */
  .fa {
@@ -149,5 +158,5 @@ footer {
   } 
 
 footer a {
-    color: #f8f9fa;
+    color: white;
 }
