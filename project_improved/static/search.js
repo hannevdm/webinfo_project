@@ -32,8 +32,6 @@ function createResult(index, data){
     bPubl.textContent = 'First Publish Year: '+data.docs[index].first_publish_year;
     const bButton = resultsTemp.getElementById("interested");
     bButton.href = "https://www.google.com"; //TODO: make this link make sense
-    const bImg = resultsTemp.querySelector(".book-image");
-    bImg.src = "http://covers.openlibrary.org/b/isbn/"+data.docs[0].isbn[0]+"-M.jpg";
 
     const booksOutput = document.getElementById('books-output');
     booksOutput.appendChild(resultsTemp);
@@ -70,19 +68,19 @@ function encodePublishYear(){
 
 async function searchBooks() {
     // Build the base URL
-    let url = 'http://openlibrary.org/search.json?';
+    let url = 'http://openlibrary.org/search.json?q=';
     // Add parameters if provided
-    url += 'author=Agatha Christie';
+    url += 'author:("Agatha Christie")';
     if (isInputProvided('title')) {
         const t = document.getElementById("title").value;
-        url += '&title=' + encodeURIComponent(t);
+        url += ' title:("'+t+'")';
     }
     if (isInputProvided('location')) {
-        const t = document.getElementById("location").value;
-        url += '&place=' + encodeURIComponent(t);
+        const l = document.getElementById("location").value;
+        url += ' place:("' + l + '")';
     }
     const y = encodePublishYear();
-    url += '&first_publish_year:' + y; //TODO: looking for a book with publish year set to a year the book  wasnt published, still gives th ebook as result ...
+    url += ' first_publish_year:' + y; //TODO: looking for a book with publish year set to a year the book  wasnt published, still gives th ebook as result ...
 
 
     // Fetch the data
