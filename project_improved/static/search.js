@@ -1,4 +1,4 @@
-let currentPage = 1;
+var currentPage = 1;
 const resultCountElem = document.getElementById("results-count");
 const resultTotalElem = document.getElementById("results-total");
 const loadMoreButton = document.getElementById("load-more");
@@ -31,7 +31,7 @@ function createResult(index, data){
     const bPubl = resultsTemp.querySelector(".publish-year");
     bPubl.textContent = 'First Publish Year: '+data.docs[index].first_publish_year;
     const bButton = resultsTemp.getElementById("interested");
-    bButton.href = "https://www.google.com"; //TODO: make this link make sense
+    bButton.href = 'https://openlibrary.org'+data.docs[index].key;
 
     const booksOutput = document.getElementById('books-output');
     booksOutput.appendChild(resultsTemp);
@@ -40,17 +40,24 @@ function createResult(index, data){
 
 async function ProcessForm() {
     document.getElementById('books-output').innerHTML = "";
+    document.getElementById("error-message").innerHTML = "";
+    let currentPage = 1;
+    document.getElementById("results-count").innerHTML="";
+    document.getElementById("results-total").innerHTML="";
 
     //show loading element
     document.getElementById("loader").style.display = "block";
+    //hide load more button
+    document.getElementById("result-actions").style.display = "none";
 
     data = await searchBooks();
 
     //hide loading element
     document.getElementById("loader").style.display = "none";
-    addResults(currentPage,data);
-    document.getElementById("result-actions").style.display = "block";
 
+    addResults(currentPage,data);
+    //show load more button
+    document.getElementById("result-actions").style.display = "block";
 }
 
 function isInputProvided(elementId) {
@@ -66,6 +73,8 @@ function encodePublishYear(){
     return `[${begin}+TO+${end}]`;
 }
 
+
+
 async function searchBooks() {
     // Build the base URL
     let url = 'http://openlibrary.org/search.json?q=';
@@ -80,13 +89,31 @@ async function searchBooks() {
         url += ' place:("' + l + '")';
     }
     const y = encodePublishYear();
-    url += ' first_publish_year:' + y; //TODO: looking for a book with publish year set to a year the book  wasnt published, still gives th ebook as result ...
+    url += ' first_publish_year:' + y;
 
 
-    // Fetch the data
-    const response = await fetch(url)
-        .then(a => a.json());
-    return response;
+    try {
+        // Fetch the data
+        const response = await fetch(url);
+        if (!response.ok) {
+          throw new Error(`API request failed with status ${response.status}`);
+        }
+        const data = await response.json();
+    
+        if (data.numFound === 0) {
+            const err = document.getElementById("error-message");
+            err.textContent = "No books found for your search.";
+            return;
+        }
+    
+        return data; // Return search results if found
+      } catch (error) {
+        // Handle any errors during API request or parsing
+        console.error("Error fetching books:", error);
+        const err = document.getElementById("error-message");
+        err.textContent = "An error occurred while searching for books. Please try again later.";
+        return null;
+      }
 }
 
 const addResults = (pageIndex,data) => {

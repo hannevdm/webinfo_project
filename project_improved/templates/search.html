@@ -22,7 +22,7 @@ Search
         <div class="location"></div>
         <div class="author"></div>
         <div class="publish-year"></div>
-        <div class="btn btn-sm btn-outline-secondary mt-2 mb-2"><a id="interested">Visit On External Website</a></div>
+        <div class="btn btn-sm btn-outline-secondary mt-2 mb-2"><a id="interested" target="_blank">Visit On External Website</a></div>
     </div>
 </template>
 
@@ -32,7 +32,7 @@ Search
         <div class="col-sm-auto mt-3">
             <h1>Search For Books</h1>
             <hr class="my-6">
-            <form action="" id="search-form"> <!-- possible attribute: pattern fo regex operations-->
+            <form action="" id="search-form">
                 <div class="form-group mt-2">
                     <label>Author</label>
                     <input class="form-control" type="text" placeholder="Agatha Christie" readonly>
@@ -50,7 +50,7 @@ Search
                         </div>
                         <div class="col">
                             <label for="end_publ_year">And</label>
-                            <input type="number" min="1400" max="2024" step="1" class="form-control" id="end_publ_year" value="2024" /> <!--TODO: 'And' cant be higher than Begin -->
+                            <input type="number" min="1400" max="2024" step="1" class="form-control" id="end_publ_year" value="2024" />
                         </div>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ Search
                 </span>
             </div>
             <div id="loader"></div>
-            <div id="error-message"></div> <!-- TODO: add errors -->
+            <div id="error-message"></div>
         </div>
 
     </div>
