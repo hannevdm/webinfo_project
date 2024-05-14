@@ -64,27 +64,26 @@
     text-align: left;
     padding: 14px;
 }
-#carouselphotos {
+#carousel {
     object-fit: contain;
-    width: 400px;
-    height: 400px;
     margin: auto;
+    justify-content: left;
 }
 
 .carousel-control-prev-icon{
-    position:absolute;
+    position:-ms-device-fixed;
     top:200px;
     z-index: 5;
-    width:100%;
 }
 
 .carousel-control-next-icon {
-    position:absolute;
+    position:-ms-device-fixed;
     top:200px;
     z-index: 5;
-    width:100%;
 }
 
-.tl-caption .tl-text .tl-credit {
-    font-family: "Helvetica Neue", sans-serif;
+.carousel-item {
+    overflow: hidden;
 }
+.carousel-caption { top: 100%; }
+.carousel-inner { overflow: visible; }
