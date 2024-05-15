@@ -47,9 +47,6 @@ header {
 }
 
 
-
-
-
 .navbar-custom .navbar-nav .nav-link {
   color: #ffffff; 
   font-size: 16px; 
@@ -57,7 +54,7 @@ header {
 
 .navbar-title {
   font-weight: bold;
-  color: #dfdada; 
+  color: darkred; 
   align-content: center;
   text-align: center;
   font-family: "American Typewriter", serif;
@@ -84,7 +81,7 @@ header {
 }
 
 .navbar-subtitle {
-  color: #959291; 
+  color: #000000; 
   text-align:center;
   font-family: "American Typewriter", serif;
   font-size: 20px;
@@ -113,14 +110,11 @@ footer {
   width: 100%;
   padding: 40px 0; 
   margin: 0 auto;
-  border: 1px dotted black;
   font-family: "American Typewriter", serif;
   display: block;
   bottom: 0;
   position: bottom;
 }
-
-
 
  /* Style all font awesome icons */
  .fa {
