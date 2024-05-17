@@ -18,27 +18,53 @@ Homepage
 
 
 <main>
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="display-4">Welcome to Plotting with Agatha</h1>
-            <p class="lead">Explore the world of the Queen of Mystery</p>
-            <a href="#" class="btn btn-primary">Learn More</a>
-        </div>
-    </section>
-
+    <div class="title">
+        <h1>Welcome to Plotting with Agatha</h1>
+        <p>Explore the world of the Queen of Mystery</p>
+    </div>
     <section class="container">
         <div class="row">
             <div class="col-md-4">
-                <h2>Biography</h2>
-                <p>Learn about Agatha Christie's life and legacy</p>
+                <article class="card">
+                    <img
+                        class="card__background"src="../static/images/desk.jpg" alt="Photo of a desk" 
+                        width="1920" height="2193"/>
+                    <div class="card__content | flow">
+                        <div class="card__content--container | flow">
+                            <h2 class="card__title">Biography</h2>
+                            <p class="card__description">Learn about Agatha Christie's life and legacy</p>
+                        </div>
+                        <a href='/bio' ><button class="btn btn-outline-secondary btn-md">Read More</button></a>
+                    </div>
+                </article>
             </div>
             <div class="col-md-4">
-                <h2>Books</h2>
-                <p>Discover Agatha Christie's famous novels and stories</p>
+                <article class="card">
+                    <img
+                        class="card__background" src="../static/images/bookshelf.jpg" alt="Photo of a bookshelf"
+                        width="1920" height="2193"/>
+                    <div class="card__content | flow">
+                        <div class="card__content--container | flow">
+                            <h2 class="card__title">Books</h2>
+                            <p class="card__description">Discover Agatha Christie's famous novels and stories</p>
+                        </div>
+                        <a href='/title' ><button class="btn btn-outline-secondary btn-md">Read More</button></a>
+                    </div>
+                </article>
             </div>
             <div class="col-md-4">
-                <h2>History</h2>
-                <p>Looking back at the world during Agatha's time</p>
+                <article class="card">
+                    <img
+                        class="card__background" src="../static/images/old-vintage-world-map.jpg" alt="Photo of a world map"
+                        width="1920" height="2193"/>
+                    <div class="card__content | flow">
+                        <div class="card__content--container | flow">
+                            <h2 class="card__title">History</h2>
+                            <p class="card__description">Look back at the world during Agatha's time</p>
+                        </div>
+                        <a href='/timeline' ><button class="btn btn-outline-secondary btn-md">Read More</button></a>
+                    </div>
+                </article>
             </div>
         </div>
     </section>

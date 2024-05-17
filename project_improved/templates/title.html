@@ -16,10 +16,15 @@ Browse By Title
 
 <template id="cardTemplate">
     <div class="card col-md-2 col-sm-4">
-        <img class="card-img-top" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text"></p>
+        <img class="card_image" alt="No Image">
+        <div class="card_overlay">
+            <div class="card_header">
+                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+                <div class="card_header-text">
+                    <h5 class="card_title"></h5>
+                </div>
+            </div>
+            <p class="card_description">Agatha Christie</p>
         </div>
     </div>
 </template>
@@ -39,40 +44,40 @@ Browse By Title
     <h4 class="preview-subtitle"></h4>
     <div class="container">
         <div class="row align-items-center">
-            <div class="col">
-                <i class="fa-solid fa-circle-info float-end"></i>
+            <div class="col-auto justify-content-center" data-tip="subject">
+                <i class="fa-solid fa-circle-info"></i>
             </div>
             <div class="col">
                 <div class="preview-info float-start"></div>
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col">
-                <i class="fa-regular fa-calendar-days float-end"></i>
+            <div class="col-auto justify-content-center" data-tip="year of first publish">
+                <i class="fa-regular fa-calendar-days"></i>
             </div>
             <div class="col">
                 <div class="preview-year float-start"></div>
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col">
-                <i class="fa-solid fa-star float-end"></i>
+            <div class="col-auto justify-content-center" data-tip="average rating">
+                <i class="fa-solid fa-star"></i>
             </div>
             <div class="col">
                 <div class="preview-rating float-start"></div>
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col">
-                <i class="fa-solid fa-location-dot float-end"></i>
+            <div class="col-auto justify-content-center" data-tip="where the story takes place">
+                <i class="fa-solid fa-location-dot"></i>
             </div>
             <div class="col">
                 <div class="preview-location float-start"></div>
             </div>
         </div>
         <div class="row align-items-center">
-            <div class="col">
-                <i class="fa-solid fa-hashtag float-end"></i>
+            <div class="col-auto justify-content-center" data-tip="ISBN">
+                <i class="fa-solid fa-hashtag"></i>
             </div>
             <div class="col">
                 <div class="preview-isbn float-start"></div>
@@ -87,11 +92,10 @@ Browse By Title
 
 
 <main>
-    <br>
     <div class="container">
         <div class="row">
-            <div class="col d-flex align-items-center">
-                <h2>Browse By Title</h2>
+            <div class="col d-flex align-items-center pt-3">
+                <h1>Browse By Title</h1>
             </div>
             <div class="col d-flex justify-content-end align-items-center m-3">
                 <div id="loader"></div>

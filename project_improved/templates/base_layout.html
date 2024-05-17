@@ -17,18 +17,15 @@
     <div class="container-fluid">
         <div class="row justify-content-between">
             <div class="col-lg-12">
-                <div class="text-center" >
-                    <a class="navbar-title blog-header-logo">Plotting with Agatha</a>
-                    <div class="navbar-subtitle" class="text-center">For History, Mystery, and Christie Lovers</div>
-                </div>
+                <div class="navbar-title" class="text-center">Plotting with Agatha</div>
+                <div class="navbar-subtitle" class="text-center">For History, Mystery, and Christie Lovers</div>
             </div>
         </div>
     </div>
-
 </header>
 <nav class="navbar navbar-expand-lg navbar-custom">
     <a class="navbar-brand" href="/">Home</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -44,14 +41,14 @@
                 <a class="nav-link" href="/context">Context</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Browse by
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/title">Title</a>
-                    <a class="dropdown-item" href="/map">Location</a>
-                    <a class="dropdown-item" href="/books">Top 10</a>
-                </div>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="/title">Title</a></li>
+                    <li><a class="dropdown-item" href="/map">Location</a></li>
+                    <li><a class="dropdown-item" href="/books">Top 10</a></li>
+                </ul>
             </li>
         </ul>
         <div class="col d-flex justify-content-end align-items-center m-3">
@@ -69,23 +66,16 @@
     <div class="container">
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
-                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
-                </a>
-                <span class="mb-3 mb-md-0 text-muted">&copy; 2024 Agatha Christie Foundation, Inc</span>
+                <span class="mb-3 mb-md-0">&copy; 2024 Agatha Christie Foundation, Inc</span>
             </div>
             <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-                <li class="ms-3"><a href="#" class="fa fa-facebook"></a></li>
-                <li class="ms-3"><a href="#" class="fa fa-twitter"></a></li>
-                <li the="ms-3"><a href="#" class="fa fa-instagram"></a></li>
+                <li><a href="https://www.facebook.com/OfficialAgathaChristie" class="fa fa-brands fa-facebook"></a></li>
+                <li><a href="https://twitter.com/agathachristie" class="fa fa-brands fa-twitter"></a></li>
+                <li><a href="https://www.instagram.com/officialagathachristie/" class="fa fa-brands fa-instagram"></a></li>
             </ul>
         </footer>
     </div>
 </footer>
 {% block specific_js %}{% endblock %}
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 </body>
 </html>
