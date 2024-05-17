@@ -17,15 +17,19 @@ h1{
 }
 
 .accordion-button {
-    background-color: #bd634c;
-    color: #ffffff; 
+    background-color: #f6f5f5;
+    color: #0a0000; 
     font-size: 30px;
     font-family: "American Typewriter", serif; 
     text-align: center;
     justify-content: center;
     box-shadow: 5px 5px 5px rgba(55, 28, 28, 0.1); 
 }
-  
+
+accordion-button-collapsed {
+    background-color: #971515;
+}
+
 
   .content-container {
     display: flex;
