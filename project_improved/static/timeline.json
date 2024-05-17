@@ -2,8 +2,8 @@
   "title": {
     "media": {
       "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Agatha_Christie.png",
-      "caption": "Agatha Christie portrait",
-      "credit": "Agatha Christie plaque -Torre Abbey.jpg: Violetrigaderivative work: F l a n k e r, CC BY-SA 3.0 <http://creativecommons.org/licenses/by-sa/3.0/>, via Wikimedia Commons"
+      "caption": "Portrait of Agatha Christie",
+      "credit": "Agatha Christie plaque|Torre Abbey.jpg: Violetrigaderivative work: Flanker, <a href=http://creativecommons.org/licenses/by-sa/3.0/>CC BY-SA 3.0</a>, via Wikimedia Commons"
     },
     "text": {
       "headline": "Agatha Christie<br/> 1890 - 1976",
@@ -16,8 +16,8 @@
         "media": {
           "url": "https://upload.wikimedia.org/wikipedia/commons/6/68/Ashfield_Torquay_2.jpg",
           "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/6/68/Ashfield_Torquay_2.jpg",
-          "caption": "Christie's birthplace and childhood home, Ashfield, in Torquay, Devon",
-          "credit": "Wikimedia Commons"
+          "caption": "Ashfield, Christie's birthplace, in Torquay, Devon",
+          "credit": "family history sources, Public domain, via Wikimedia Commons"
         },
         "start_date": {
           "month": "9",
@@ -48,7 +48,7 @@
         },
         "text": {
           "headline": "The Great War",
-          "text": "Later called World War I shortly after the beginning of World War II, this war was different from any previous in history due to its devastating use of modern technology"
+          "text": "Later called World War I shortly after the beginning of World War II, <a href=context.html>this war</a> was different from any previous in history due to its devastating use of modern technology. Agatha serves as a nurse in Torquay."
         }
       },
       {
@@ -89,7 +89,7 @@
         "media": {
           "url": "https://covers.openlibrary.org/b/olid/OL47232302M-L.jpg",
           "thumbnail": "https://covers.openlibrary.org/b/olid/OL47232302M-S.jpg",
-          "caption": "Cover of The Mysterious Affair at Styles",
+          "caption": "Cover, The Mysterious Affair at Styles",
           "credit": "openlibrary.org"
         },
         "start_date": {
@@ -106,7 +106,7 @@
         "media": {
           "url": "https://covers.openlibrary.org/b/olid/OL46524697M-L.jpg",
           "thumbnail": "https://covers.openlibrary.org/b/olid/OL46524697M-S.jpg",
-          "caption": "Cover of The Murder of Roger Ackroyd",
+          "caption": "Cover, The Murder of Roger Ackroyd",
           "credit": "openlibrary.org"
         },
         "start_date": {
@@ -136,7 +136,7 @@
         },
         "text": {
           "headline": "Disappearance",
-          "text": "Agatha Christie mysteriously disappears for nearly two weeks in late 1926"
+          "text": "Agatha Christie mysteriously disappears for nearly two weeks in late 1926. Rumours abound, but Agatha never fully reveals her activities or whereabouts during that time."
         }
       },
       {
@@ -261,9 +261,9 @@
       },
       {
         "media": {
-          "url": "ADD LINK",
-          "caption": "ADD CAPTION",
-          "credit": "ADD CREDIT"
+          "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/St_Paul_destroyed.jpg",
+          "caption": "St. Paul's Cathedral avoids total destruction in London after the Blitz, 1940",
+          "credit": "H.Mason, Public domain, via Wikimedia Commons"
         },
         "start_date": {
           "month": "9",
@@ -271,7 +271,7 @@
           "year": "1943"
         },
         "text": {
-          "headline": "Stage Play Adaptation of And Then There Were None Premieres in London",
+          "headline": "Stage Play Adaptation of And Then There Were None Premieres at the New Wimbledon Theatre in London",
           "text": "In light of the London Blitz during the Second World War, to avoid bringing down the mood of British theatregoers even further, Christie modified the stage play version of And Then There Were None to make the ending less bleak."
         }
       },
@@ -289,7 +289,7 @@
         },
         "text": {
           "headline": "India and Pakistan become independent from the British Empire",
-          "text": "After nearly a century of British rule, India and Pakistan become independent states upon the signing of the Indian Independence Act"
+          "text": "After nearly a century of British <a href=context.html>colonial rule</a>, India and Pakistan become independent states upon the signing of the Indian Independence Act"
         }
       },
       {
@@ -317,7 +317,7 @@
           "credit": "Edi Šelhaus, Public domain, via Wikimedia Commons"
         },
         "start_date": {
-          "year": "1976"
+          "year": "1977"
         },
         "end_date": {
           "year": "2024"
