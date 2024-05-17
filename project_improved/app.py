@@ -5,12 +5,16 @@ print("running")
 app = Flask(__name__)
 
 @app.route("/")
-def title():
+def homepage():
     return render_template("homepage.html")
 
 @app.route("/map")
 def map():
     return render_template("map.html")
+
+@app.route("/books")
+def books():
+    return render_template("coverstory.html")
 
 @app.route("/context")
 def context():
@@ -25,7 +29,7 @@ def timeline():
     return render_template("timeline.html")
 
 @app.route("/title")
-def books():
+def title():
     return render_template("title.html")
 
 @app.route("/search")
