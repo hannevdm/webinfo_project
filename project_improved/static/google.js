@@ -109,7 +109,7 @@ async function initMap() {
         const marker = new AdvancedMarkerElement({
             position,
             map,
-            title: `${i + 1}. ${title}`,
+            title: ` ${title}`,
             content: pin.element,
         });
 

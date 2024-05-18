@@ -78,8 +78,12 @@ header {
   padding-right: 20px;
 }
 
+.nav-item .dropdown-menu{
+  background-color:  #e4d9d9;
+}
+
 .nav-item .dropdown-item {
-  color: #321313; 
+  color: #321313;
   font-family: "American Typewriter", serif;
   font-weight: bold;
   font-size: 16px;
