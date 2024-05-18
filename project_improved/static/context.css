@@ -1,4 +1,6 @@
-
+h1 {
+    box-shadow: 5px 2px 10px rgba(6, 5, 5, 0.1);
+}
 
 .accordion {
     margin: 20px;
