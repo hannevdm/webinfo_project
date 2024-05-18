@@ -48,7 +48,7 @@
         },
         "text": {
           "headline": "The Great War",
-          "text": "Later called World War I shortly after the beginning of World War II, <a href=context.html>this war</a> was different from any previous in history due to its devastating use of modern technology. Agatha serves as a nurse in Torquay."
+          "text": "Later called World War I shortly after the beginning of World War II, <a href=context>this war</a> was different from any previous in history due to its devastating use of modern technology. Agatha serves as a nurse in Torquay."
         }
       },
       {
@@ -168,7 +168,7 @@
         },
         "text": {
           "headline": "Stock Market Crash",
-          "text": "The Wall Street stock market crashes, causing economic chaos and a depression that spread from the United States to Europe by the early 1930s"
+          "text": "The Wall Street stock market crashes, causing economic chaos and a <a href=context>depression</a> that spread from the United States to Europe by the early 1930s"
         }
       },
       {
@@ -240,7 +240,7 @@
         },
         "text": {
           "headline": "The Second World War",
-          "text": "Germany invades Poland on 1 September 1939, starting a six-year global war that will cause immeasurable devastation and result in the deaths of millions, including the Nazi mass murder of six million Jews and millions of others they deemed their enemies. After the war ended in Europe in April 1945 with Germany's surrender, it ended globally with Japan's surrender after the United States dropped two atomic bombs on Hiroshima and Nagasaki, destroying the cities and killing as many as 226,000."
+          "text": "Germany invades Poland on 1 September 1939, starting a <a href=context>global war</a> that will cause immeasurable devastation and result in the deaths of millions, including the Nazi mass murder of six million Jews and millions of others they deemed enemies. After the war ended in Europe in April 1945 with Germany's surrender, it ended globally with Japan's surrender after the United States dropped two atomic bombs on Hiroshima and Nagasaki, destroying the cities and killing as many as 226,000."
         }
       },
       {
@@ -289,7 +289,7 @@
         },
         "text": {
           "headline": "India and Pakistan become independent from the British Empire",
-          "text": "After nearly a century of British <a href=context.html>colonial rule</a>, India and Pakistan become independent states upon the signing of the Indian Independence Act"
+          "text": "After nearly a century of British <a href=context>colonial rule</a>, India and Pakistan become independent states upon the signing of the Indian Independence Act"
         }
       },
       {
