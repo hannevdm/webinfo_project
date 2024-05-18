@@ -5,36 +5,31 @@ async function listBooks(place) {
         url += ' place:("' + encodeURIComponent(place) + '")';
     }
 
-    console.log("Fetching URL:", url); // Debugging statement
+    console.log("Fetching URL:", url); 
 
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log("Response Data:", data); // Debugging statement
-    console.log("Docs:", data.docs); // Debugging statement
+    console.log("Response Data:", data); 
+    console.log("Docs:", data.docs); 
 
 
-
-    // Adjust filtering logic based on available fields
     const filteredResults = data.docs.filter(book => {
-        // Example: Check for `place` and alternative fields if needed
-        // Log the condition to see why filtering might fail
 
         return book.place && book.place.includes(place);
     });
 
-    console.log("Filtered Results:", filteredResults); // Debugging statement
+    console.log("Filtered Results:", filteredResults); 
 
     return filteredResults;
 }
 
 async function initMap() {
-    // Request needed libraries.
     const { Map, InfoWindow } = await google.maps.importLibrary("maps");
     const { AdvancedMarkerElement, PinElement } = await google.maps.importLibrary("marker");
     const map = new Map(document.getElementById("map"), {
-        zoom: 2.5,
-        center: { lat: 34.0, lng: 23.0 },
+        zoom: 2.9,
+        center: { lat: 34.0, lng: 0 },
         mapId: "4504f8b37365c3d0",
     });
 
