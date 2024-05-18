@@ -15,7 +15,7 @@ body {
 }
 
 h1 {
-  margin: 10px;
+  margin: 20px;
   font-family: "American Typewriter", serif;
   font-size: 35px;
   font-stretch: expanded;
@@ -27,7 +27,7 @@ h1 {
 
 header {
   margin-top: 60px;
-  background-color: white !important;
+  background-color: #e4d9d9; ;
   padding-top: 15px;
   padding-bottom: 15px;
   border-top: 10px solid darkred; 

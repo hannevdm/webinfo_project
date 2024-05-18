@@ -6,7 +6,20 @@ body {
 }
 
 main {
-    padding: 20px;
+  padding: 20px;
+}
+
+header {
+  background-color: transparent; 
+  border-top: none; 
+  border-bottom: none; 
+  margin-top: 0; 
+  padding-top: 10; 
+  padding-bottom: 10; 
+}
+
+h1 {
+  box-shadow: none;
 }
 
 .title{
