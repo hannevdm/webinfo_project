@@ -24,4 +24,4 @@ hs_err_pid*
 replay_pid*
 
 #key for API
-confidential.txt
+gmaps_api_key.txt
