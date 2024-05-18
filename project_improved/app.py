@@ -1,4 +1,4 @@
-from flask import Flask,  render_template, request
+from flask import Flask, render_template, request
 
 print("running")
 
@@ -8,9 +8,14 @@ app = Flask(__name__)
 def homepage():
     return render_template("homepage.html")
 
+def get_api_key():
+    with open('gmaps_api_key.txt', 'r') as file:
+        return file.read()
+
 @app.route("/map")
-def map():
-    return render_template("map.html")
+def map_view():
+    api_key = get_api_key()
+    return render_template("map.html", api_key=api_key)
 
 @app.route("/books")
 def books():
@@ -40,6 +45,3 @@ app.debug = True
 
 if __name__ == "__main__":
     app.run()
-
-
-
