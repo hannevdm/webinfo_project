@@ -1,24 +1,4 @@
-body {
-    font-family: "PT Sans Narrow";
-    background-color: #f8f9fa;
-}
-.navigation {
-    font-size: 16px;
-    font-family: "PT Sans Narrow";
-    font-weight: bold;
-    background: antiquewhite;
-    text-align: center;
-    padding: 16px;
-    cursor: pointer;
-}
-.navigation .nav {
-    padding: 6px;
-    justify-content: center;
-}
-.navigation .nav:hover {
-    text-decoration: underline;
-    color: tan;
-}
+
 .content {
     padding: 16px;
     color: #424242;
@@ -40,10 +20,6 @@ body {
     border-radius: 80%;
     float: inherit;
     margin-right: 10px;
-}
-.title h1 {
-    white-space: nowrap;
-    overflow: visible;
 }
 .typewriter-image {
     max-width: 70%;
@@ -86,10 +62,4 @@ body {
 .carousel-caption p {
     font-size: 1rem;
     margin-bottom: 0;
-}
-.footer {
-    background-color: salmon;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
 }
