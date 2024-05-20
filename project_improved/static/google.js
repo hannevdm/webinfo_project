@@ -5,13 +5,13 @@ async function listBooks(place) {
         url += ' place:("' + encodeURIComponent(place) + '")';
     }
 
-    console.log("Fetching URL:", url); 
+    console.log("url fetched:", url); 
 
     const response = await fetch(url);
     const data = await response.json();
 
-    console.log("Response Data:", data); 
-    console.log("Docs:", data.docs); 
+    console.log("resp", data); 
+    console.log("doc", data.docs); 
 
 
     const filteredResults = data.docs.filter(book => {
@@ -33,7 +33,6 @@ async function initMap() {
         mapId: "4504f8b37365c3d0",
     });
 
-    // Set LatLng and title text for the markers.
     const tourStops = [
         {
             position: { lat: 50.5719, lng: -3.9207 },
@@ -92,10 +91,10 @@ async function initMap() {
         },
     ];
 
-    // Create an info window to share between markers.
+  
     const infoWindow = new InfoWindow();
 
-    // Create the markers.
+
     tourStops.forEach(({ position, title, bookList }, i) => {
         const pin = new PinElement({
             
@@ -108,7 +107,7 @@ async function initMap() {
             content: pin.element,
         });
 
-        // Add a click listener for each marker, and set up the info window.
+    
         marker.addListener("click", async () => {
             const books = await listBooks(title);
             let bookListHtml = "<ul>";
@@ -116,11 +115,11 @@ async function initMap() {
                 bookListHtml += `<li>${book.title}</li>`;
             });
 
-            console.log("Books:", books);
+            console.log("books:", books);
             bookListHtml += "</ul>";
             const placename = `<h1>${title}</h1><p>${bookListHtml}</p>`;
 
-            console.log("Booklist HTML:", bookListHtml);
+            console.log("booklist HTML:", bookListHtml);
     
             infoWindow.close();
             infoWindow.setContent(placename);
