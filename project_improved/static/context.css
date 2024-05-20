@@ -47,7 +47,7 @@ h1 {
 .content-container {
     display: flex;
     align-items: center; 
-    column-gap: 30px;
+    column-gap: 10px;
     padding: 15px; 
     background-color: #fff; 
     border-radius: 5px; 
@@ -57,10 +57,10 @@ h1 {
 
 .content-container .accordion-body {
     font-size: 16px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: "PT Sans Narrow";
     line-height: 1.8; 
     color: #333; 
-    padding-bottom: 15px;
+    
     text-indent: 15px;
 }
 
