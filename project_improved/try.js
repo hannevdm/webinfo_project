@@ -9,7 +9,6 @@ async function listBooks(place) {
     const response = await fetch(url);
     const data = await response.json();
 
-    // Filter the results to ensure 'place' is standalone and not 'publish_place'
     const filteredResults = data.docs.filter(book => {
         return book.place && !book.publish_place;
     });
