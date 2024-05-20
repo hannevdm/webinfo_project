@@ -262,6 +262,7 @@
       {
         "media": {
           "url": "https://upload.wikimedia.org/wikipedia/commons/b/b0/St_Paul_destroyed.jpg",
+          "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/b/b0/St_Paul_destroyed.jpg",
           "caption": "St. Paul's Cathedral avoids total destruction in London after the Blitz, 1940",
           "credit": "H.Mason, Public domain, via Wikimedia Commons"
         },
