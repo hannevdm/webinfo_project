@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import os
 
 print("running")
 
@@ -9,7 +10,9 @@ def homepage():
     return render_template("homepage.html")
 
 def get_api_key():
-    with open('gmaps_api_key.txt', 'r') as file:
+    # Determine the path to the file
+    file_path = os.path.join(app.root_path, 'static', 'gmaps_api_key.txt')
+    with open(file_path, 'r') as file:
         return file.read()
 
 @app.route("/map")
