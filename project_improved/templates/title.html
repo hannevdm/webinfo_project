@@ -15,16 +15,12 @@ Browse By Title
 <body>
 
 <template id="cardTemplate">
-    <div class="card col-md-2 col-sm-4">
-        <img class="card_image" alt="No Image">
-        <div class="card_overlay">
-            <div class="card_header">
-                <svg class="card_arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
-                <div class="card_header-text">
-                    <h5 class="card_title"></h5>
-                </div>
+    <div class="card text-white m-3">
+        <img class="card-img" alt="No Image">
+        <div class="card-img-overlay d-flex flex-column justify-content-end">
+            <div class="content">
+                <h2 class="card-title align-items-center"></h2>
             </div>
-            <p class="card_description">Agatha Christie</p>
         </div>
     </div>
 </template>
@@ -84,7 +80,7 @@ Browse By Title
             </div>
         </div>
     </div>
-    <!-- TODO: add time book takes place, contributors (users in fas), and data tips for the icons ,
+    <!-- TODO: add time book takes place, contributors (users in fas)
             TODO: make button to jump to browse by map page-->
 </div>
 </template>
@@ -92,19 +88,27 @@ Browse By Title
 
 
 <main>
+
     <div class="container">
-        <div class="row">
-            <div class="col d-flex align-items-center pt-3">
-                <h1>Browse By Title</h1>
+        <div class="head">
+            <div class="row">
+                <div class="col d-flex align-items-center pt-3">
+                    <h1>Browse By Title</h1>
+                </div>
+                <div class="col d-flex justify-content-end align-items-center m-3">
+                    <div id="loader"></div>
+                </div>
             </div>
-            <div class="col d-flex justify-content-end align-items-center m-3">
-                <div id="loader"></div>
+            <div class="row">
+                <div class="col d-flex align-items-center pt-3">
+                    <p style="font-style:italic;">Click on a card to get more details</p>
+                </div>
             </div>
-        </div>
+
     </div>
 
 
-    <div class="row flex-row justify-content-center card-container" id="card-container">
+    <div class="card-container" id="card-container">
     </div>
 
     <div class="cards-preview">

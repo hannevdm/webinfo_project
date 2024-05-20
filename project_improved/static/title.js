@@ -18,16 +18,22 @@ async function createCard(title) {
     response = await getBooks(title);
 
     // Update card content
-    const cardTitle = cardClone.querySelector(".card_title");
+    const cardTitle = cardClone.querySelector(".card-title");
     cardTitle.textContent = title;
 
-    // Assuming the first book [0] has the ISBN
-    if (response.docs[0] && response.docs[0].isbn) {
-        const cardImg = cardClone.querySelector(".card_image");
-        cardImg.src = "http://covers.openlibrary.org/b/isbn/"+response.docs[0].isbn[0]+"-L.jpg"; //-L for really big & high resolution, -S for small
-    } else {
-        // Handle cases where there's no ISBN or no books found
-        console.error("No ISBN found for book:", title);
+    if (response.docs && response.docs[0]) {
+        const isbn = response.docs[0].isbn && response.docs[0].isbn[0]; // Check if ISBN exists before accessing it
+        const cardImg = cardClone.querySelector(".card-img");
+        const link = "http://covers.openlibrary.org/b/isbn/" + isbn + "-L.jpg?default=false";
+        
+        fetch(link)
+        .then(response => {
+        if (response.status === 404) {
+            console.warn("No image found for book:", title);
+            cardImg.src = "../static/images/" + title + ".jpg";
+        } else {cardImg.src = link;
+        }
+        })
     }
 
     return cardClone;
@@ -55,7 +61,7 @@ async function loopThroughBooks() {
     document.querySelectorAll('.card-container .card').forEach(card => {
         card.onclick = () =>{
             previewContainer.style.display = 'flex';
-            let name = card.querySelector('.card_title').textContent;
+            let name = card.querySelector('.card-title').textContent;
             previewBox.forEach(preview =>{
                 let target = preview.getAttribute('data-target');
                 if(name == target){
@@ -66,9 +72,9 @@ async function loopThroughBooks() {
     });
 }
 async function populatePreview(p,name,cont){
-    document.querySelectorAll('.card-container .card').forEach(card => {
-            card.querySelector(".card_overlay").style.display="none";
-    });
+    //document.querySelectorAll('.card-container .card').forEach(card => {
+    //        card.querySelector(".card_overlay").style.display="none";
+    //});
     response = await getBooks(name);
     const prev = document.getElementById("cardPreviewTemplate").content.cloneNode(true); // clone the template with content
     const previewTitle = prev.querySelector(".preview-title");
@@ -93,9 +99,9 @@ async function populatePreview(p,name,cont){
 
     const closeButton = p.querySelector('.fa-times');
     closeButton.addEventListener('click', () => {
-        document.querySelectorAll('.card-container .card').forEach(card => {
-            card.querySelector(".card_overlay").style.display="block";
-        });
+        //document.querySelectorAll('.card-container .card').forEach(card => {
+        //    card.querySelector(".card_overlay").style.display="block";
+        //});
         p.classList.remove('active');
         cont.style.display = 'none';
 
