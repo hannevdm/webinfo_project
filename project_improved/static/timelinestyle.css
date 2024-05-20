@@ -53,13 +53,31 @@
     padding: 14px;
 }
 
-#linktotimeline {
+#linktotimeline .p {
     font-size: 12px;
     font-family: "American Typewriter", serif;
     font-weight: normal;
-    text-align: left;
+    text-align: center;
     padding: 14px;
 }
+
+#linktotimeline a:link {
+    color: black;
+}
+
+#linktotimeline a:hover {
+    color: darkred;
+}
+
+#linktotimeline a:active {
+    color: black;
+}
+
+#linktotimeline a:visited {
+    color: darkred;
+}
+
+
 #carousel {
     object-fit: contain;
     margin: auto;
@@ -120,4 +138,8 @@
 #timeline-embed .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline {
     color: white;
     font-family: "American Typewriter", serif;
+}
+
+#timeline-embed .tl-timemarker-content-container {
+    object-fit: auto;
 }
